@@ -15,7 +15,3 @@ osc -A https://api.opensuse.org checkout home:uncomfyhalomacro:branches:utilitie
 It seems bash/zsh `mkdir somedir && $_` has a nushell equivalent - `mkdir -v somedir | cd $in.0`
 or `cd (mkdir -v somedir | first)`.
 
-
-
-
-

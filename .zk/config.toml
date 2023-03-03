@@ -222,7 +222,7 @@ push = "zk git push $@"
 status = "zk git status $@"
 
 # Use glow to show all markdown
-glow = "glow -a $ZK_NOTEBOOK_DIR $@"
+glow = "glow $ZK_NOTEBOOK_DIR $@"
 
 # Edit this configuration file.
 conf = '$EDITOR "$ZK_NOTEBOOK_DIR/.zk/config.toml"'
