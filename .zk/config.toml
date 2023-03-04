@@ -88,6 +88,23 @@ filename = "{{format-date now '%Y-%m-%d'}}"
 extension = "md"
 template = "daily.md"
 
+[group.harelang]
+paths = ["journal/harelang"]
+
+[group.harelang.note]
+filename = "{{title}}-{{format-date now}}"
+
+[group.janetlang]
+paths = ["journal/janetlang"]
+
+[group.janetlang.note]
+filename = "{{title}}-{{format-date now}}"
+
+[group.crystallang]
+paths = ["journal/crystallang"]
+
+[group.crystallang.note]
+filename = "{{title}}-{{format-date now}}"
 
 # MARKDOWN SETTINGS
 [format.markdown]
@@ -182,9 +199,14 @@ dead-link = "error"
 
 # Shortcut to a command.
 ls = "zk list $@"
-7l7w = "zk new  -g 'seven languages in seven weeks' $ZK_NOTEBOOK_DIR/journal/seven-languages-in-seven-weeks $@"
-school = "mkdir -p $ZK_NOTEBOOK_DIR/journal/school; zk new -g school $ZK_NOTEBOOK_DIR/journal/school $@"
 daily = 'zk new --no-input "$ZK_NOTEBOOK_DIR/journal/daily"'
+
+# Other shortcut commands for some fav stuff
+7l7w = "mkdir -p $ZK_NOTEBOOK_DIR/journal/seven-languages-in-seven-weeks; zk new  -g 'seven languages in seven weeks' $ZK_NOTEBOOK_DIR/journal/seven-languages-in-seven-weeks $@"
+school = "mkdir -p $ZK_NOTEBOOK_DIR/journal/school; zk new -g school $ZK_NOTEBOOK_DIR/journal/school $@"
+hare = "mkdir -p $ZK_NOTEBOOK_DIR/journal/harelang; zk new -g harelang $ZK_NOTEBOOK_DIR/journal/harelang $@"
+janet = "mkdir -p $ZK_NOTEBOOK_DIR/journal/janetlang; zk new -g janetlang $ZK_NOTEBOOK_DIR/journal/janetlang $@"
+crystal = "mkdir -p $ZK_NOTEBOOK_DIR/journal/crystallang; zk new -g crystallang $ZK_NOTEBOOK_DIR/journal/crystallang $@"
 
 # Default flags for an existing command.
 # list = "zk list --quiet $@"
