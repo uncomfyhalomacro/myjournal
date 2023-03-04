@@ -93,18 +93,21 @@ paths = ["journal/harelang"]
 
 [group.harelang.note]
 filename = "{{title}}-{{format-date now}}"
+template = "tags.md"
 
 [group.janetlang]
 paths = ["journal/janetlang"]
 
 [group.janetlang.note]
 filename = "{{title}}-{{format-date now}}"
+template = "tags.md"
 
 [group.crystallang]
 paths = ["journal/crystallang"]
 
 [group.crystallang.note]
 filename = "{{title}}-{{format-date now}}"
+template = "tags.md"
 
 # MARKDOWN SETTINGS
 [format.markdown]
