@@ -1,5 +1,3 @@
-# hare programming language tutorial
-
 ---
 tags:
   - language hopping
@@ -7,6 +5,8 @@ tags:
   - systems language
   - low-level language
 ---
+
+# hare programming language tutorial
 
 ## Hare's components
 
