@@ -70,10 +70,11 @@ I also created `rootbox` executable.
 ```bash
 #!/usr/bin/bash
 
-distrobox-enter --root --name obs $@
+distrobox-enter --root --name opensuse-build-service $@
 ```
 
-This is for openSUSE Build Service related stuff since I am a volunteer packager there.
+This is for openSUSE Build Service related stuff since I am a volunteer packager there. I also set
+the `--home` flag when creating this podman container.
 
 # Conclusion
 
@@ -83,6 +84,12 @@ means, it's not yet considered for daily use _even though some users are now usi
 improve the experience, it's best to file bug reports and propose suggestions to the MicroOS
 Plasma Desktop maintainers and contributors.
 
+# Troubleshooting
+
+## Blurry fonts on KDE Plasma
+
+Install all the `xdg-desktop-portal` implementations especially gnome and gtk. Blurry fonts are usually affecting
+gtk apps and not qt apps.
 
 
 
