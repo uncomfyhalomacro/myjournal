@@ -91,6 +91,15 @@ Plasma Desktop maintainers and contributors.
 Install all the `xdg-desktop-portal` implementations especially gnome and gtk. Blurry fonts are usually affecting
 gtk apps and not qt apps.
 
+# Issues
 
+NVIDIA drivers don't load as fast causing some issues with the login manager. Workarounds is a force `systemctl restart display-manager.service`.
+
+# Update on my current usage
+
+I stopped using it. MicroOS has some of it's perks but the current state of the operating system is still in it's beta/alpha state
+so some moving parts are inherently broken. It's probably because of the lack of contributors and interest from SUSE and openSUSE
+for the desktop variant of MicroOS. As much as I want to become a contributor, I realize I lack the time to do so because
+of work and personal problems and issues I still have to fix a lot in real life.
 
 
