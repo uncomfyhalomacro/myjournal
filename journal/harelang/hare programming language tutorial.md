@@ -6,6 +6,8 @@ tags:
   - low-level language
 ---
 
+#TODO: Manual Memory Management.
+
 # hare programming language tutorial
 
 ## Hare's components
@@ -68,7 +70,7 @@ As seen from above, you may also want to change its type.
 
 ##### Hare's types
 
-Numeric Types:
+###### Numeric Types
 
 - `int` ⇒ signed integer
 - `uint` ⇒ unsigned integer
@@ -97,7 +99,74 @@ Declaring an array as a variable should have a definite length.
 a; [4]int = [1, 2, 3, 4]
 ```
 
-#TODO: add slices
+###### Struct and tuple types
+
+You declare a struct with `struct`. There are two ways to create structs
+
+- as a type with `type`
+
+```hare
+type coords = struct { x: int, y: int };
+```
+
+- as an anonymous struct type
+
+```hare
+let foo = struct {
+  x: int = 20,
+  y: int = 30,
+};
+```
+
+Tuples are like structs but it does not have name fields. This is similar with other
+languages such as [Julia](https://docs.julialang.org/en/v1/manual/functions/#Tuples)
+and other languages.
+
+```hare
+let sometuple: (int, str, int) = (0, "string", 1);
+```
+
+They can be accessed by their _ordinal position_ starting from **0** like most C
+and C-inspired languages. Julia and Lua are some exceptions.
+
+###### Arrays and slices
+
+Arrays contain a fixed number of ordered values at compile-time.
+Slices store an arbitrary number of ordered values of a uniform type at runtime.
+
+```hare
+
+use fmt;
+
+export fn main() void = {
+	let arr: [_]int = [1, 2, 3, 4, 5];
+	assert(len(arr) == 5); // len is built-in
+	assert(arr[2] == 3);   // 0-indexed
+	arr[2] = 8;            // assignment
+	assert(arr[2] == 8);
+	
+	let fill: [1024]int = [1,2,3,4,5,6,7, 100...]; // fill reaminder with 100
+
+  printvals(fill[..4]);
+	printvals(fill[2..10]);
+};
+
+fn printvals(in: []int) void = {
+	fmt::printfln("input: {} integers", len(in))!;
+	for (let i = 0z; i < len(in); i += 1) {
+		fmt::printfln("in[{}]: {}", i, in[i])!;
+	};
+	fmt::println()!;
+};
+
+
+```
+
+Arrays must be initialized when declared. Large arrays can be too large, using
+the "splat" operator `...` can let you assign all remaining values to the last
+value. The last value will be repeated as the value for all the remaining values
+of the array. Hence, `fill[2..10]` will have three 100s.
+
 
 #### Error handling
 
