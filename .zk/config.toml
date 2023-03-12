@@ -109,6 +109,13 @@ paths = ["journal/crystallang"]
 filename = "{{title}}-{{format-date now}}"
 template = "tags.md"
 
+[group.todos]
+paths = ["todos/"]
+
+[group.todos.note]
+filename = "{{format-date now '%Y-%m-%d'}}"
+template = "tags.md"
+
 # MARKDOWN SETTINGS
 [format.markdown]
 
@@ -210,6 +217,7 @@ school = "mkdir -p $ZK_NOTEBOOK_DIR/journal/school; zk new -g school $ZK_NOTEBOO
 hare = "mkdir -p $ZK_NOTEBOOK_DIR/journal/harelang; zk new -g harelang $ZK_NOTEBOOK_DIR/journal/harelang $@"
 janet = "mkdir -p $ZK_NOTEBOOK_DIR/journal/janetlang; zk new -g janetlang $ZK_NOTEBOOK_DIR/journal/janetlang $@"
 crystal = "mkdir -p $ZK_NOTEBOOK_DIR/journal/crystallang; zk new -g crystallang $ZK_NOTEBOOK_DIR/journal/crystallang $@"
+todos = "mkdir -p $ZK_NOTEBOOK_DIR/todos; zk new -g todos $ZK_NOTEBOOK_DIR/todos $@"
 
 # Default flags for an existing command.
 # list = "zk list --quiet $@"
