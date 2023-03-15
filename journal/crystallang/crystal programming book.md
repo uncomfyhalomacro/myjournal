@@ -141,6 +141,90 @@ PI = 3.14
 LARGE_CONSTANT += 1
 ```
 
+---
 
+## Operators
 
+- `+` addition
+- `-` subtraction
+- `*` multiplication
+- `/` division
+- `//` floor division
+- `%` remainder integer division
+- `num.ceil` ceiling function
+- `num.floor` floor function
+- `num.round` round to the nearest integer
+- `num.abs` absolute value
 
+---
+
+### Other types not mentioned
+
+- `BigInt` arbitrarily large integer
+- `BigFloat` arbitrarily large floating point numbers
+- `BigDecimal` precise arbitrarily numbers in base 10. _Useful for currencies_
+- `BigRational` expresses numbers as a numerator and denominator
+
+---
+
+### Primitive constants
+
+- `True`
+- `False`
+- `Nil`
+
+---
+
+### Strings and chars
+
+Strings are surrounded by double quotes (") and chars are surrounded by single quotes (')
+
+```crystal
+iamstring = "Hello Crystal!"
+iamchar = 'X'
+iwillerror = 'xd'  # This will error since it's not double quoted.
+kana = 'あ'   # Crystal accepts valid unicode.
+```
+
+> Strings in crystal are immutable after they are created
+
+---
+
+### Strings and chars (continued)
+
+String methods or operations you can do with crystal are listed in pp. 46 of the book.
+
+Examples:
+
+- `str.size` the number of characters of a string
+- `str.starts_with?(str)`, `str.ends_with?(str)`, `str.includes?(str)`, and `str.in?(str)`
+- `str.split`
+
+Most of these methods are commonly found in dynamic high-level langauges, *although of a different name*, e.g. Julia
+
+---
+
+### Ranges
+
+Crystal also has a very useful feature - operators for data type `Range`.
+
+```crystal
+1..5         # => 1, 2, 3, 4, and 5. 
+1...5        # => 1, 2, 3, and 4. 
+1.0...4.0    # => Includes 3.9 and 3.999999, but not 4.
+'a'..'z'     # => All the letters of the alphabet "aa".."zz"   # => All combinations of two letters 
+```
+
+> Omitting the starts and ends gives you an open-ended range, even the idea of a pseudo-_infinite_ range with just `..`.
+
+#### Range operators
+
+There are some range operators: 
+- `range.includes?`, `range.covers?`, and `value.in? range`
+- `range.each` - useful for do-end blocks
+- `range.sample` - picks a random number on the interval
+- `range.sum` - gets the sum of the range of values (or chars*, probably)
+
+---
+
+### Enums and Symbols
