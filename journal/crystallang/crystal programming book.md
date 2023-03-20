@@ -40,6 +40,7 @@ Exploring the Crystal Programming Language
 - Concurrency
 - Low-level; can call C libraries or assembly
 - Project Manager called Shards
+- Multi-dispatch like Julia (There maybe some differences that I don't know)
 
 The book was written when Crystal was at version 1.2.2, this note was written
 at version 1.7.3.
@@ -228,3 +229,41 @@ There are some range operators:
 ---
 
 ### Enums and Symbols
+
+```crystal
+# Enum
+enum UserKind
+  Guest
+  Regular
+  Admin
+end
+
+# Symbol
+user_kind = :regular
+```
+
+> Tip: Comparing symbols is more efficient than comparing strings.
+
+---
+
+# Control Flow and Conditionals (TODO)
+
+---
+
+## `if` and `unless`
+
+Truthy values are those that are not `nil` nor `false`.
+
+```crystal
+if guess == secret_number
+  puts "You guessed it correctly!"
+else
+  puts "Sorry, the number was #{secret_number}."
+end
+```
+
+```crystal
+unless guess.in? 1..5
+  puts "Please input a number between 1 and 5."
+end
+```
