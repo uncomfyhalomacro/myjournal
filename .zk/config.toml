@@ -84,7 +84,7 @@ filename = "{{title}}-{{format-date now}}"
 paths = ["journal/daily"]
 
 [group.daily.note]
-filename = "{{format-date now '%Y-%m-%d'}}"
+filename = "{{format-date now '%Y-%m-%dT%TZ'}}"
 extension = "md"
 template = "daily.md"
 
@@ -92,14 +92,14 @@ template = "daily.md"
 paths = ["journal/harelang"]
 
 [group.harelang.note]
-filename = "{{title}}-{{format-date now}}"
+filename = "{{title}}-{{format-date now '%Y-%m-%dT%TZ'}}"
 template = "tags.md"
 
 [group.janetlang]
 paths = ["journal/janetlang"]
 
 [group.janetlang.note]
-filename = "{{title}}-{{format-date now}}"
+filename = "{{title}}-{{format-date now '%Y-%m-%dT%TZ'}}"
 template = "tags.md"
 
 [group.crystallang]
@@ -109,11 +109,18 @@ paths = ["journal/crystallang"]
 filename = "{{title}}-{{format-date now}}"
 template = "tags.md"
 
+[group.rustlang]
+paths = ["journal/rustlang"]
+
+[group.rustlang.note]
+filename = "{{title}}-{{format-date now}}"
+template = "tags.md"
+
 [group.todos]
 paths = ["todos/"]
 
 [group.todos.note]
-filename = "{{format-date now '%Y-%m-%d'}}"
+filename = "{{format-date now '%Y-%m-%dT%TZ'}}"
 template = "tags.md"
 
 # MARKDOWN SETTINGS
@@ -124,10 +131,10 @@ template = "tags.md"
 link-format = "wiki"
 # Indicates whether a link's path will be percent-encoded.
 # Defaults to true for "markdown" format and false for "wiki" format.
-#link-encode-path = true
+# link-encode-path = true
 # Indicates whether a link's path file extension will be removed.
 # Defaults to true.
-#link-drop-extension = true
+# link-drop-extension = true
 
 # Enable support for #hashtags.
 hashtags = true
@@ -217,6 +224,7 @@ school = "mkdir -p $ZK_NOTEBOOK_DIR/journal/school; zk new -g school $ZK_NOTEBOO
 hare = "mkdir -p $ZK_NOTEBOOK_DIR/journal/harelang; zk new -g harelang $ZK_NOTEBOOK_DIR/journal/harelang $@"
 janet = "mkdir -p $ZK_NOTEBOOK_DIR/journal/janetlang; zk new -g janetlang $ZK_NOTEBOOK_DIR/journal/janetlang $@"
 crystal = "mkdir -p $ZK_NOTEBOOK_DIR/journal/crystallang; zk new -g crystallang $ZK_NOTEBOOK_DIR/journal/crystallang $@"
+rust = "mkdir -p $ZK_NOTEBOOK_DIR/journal/rustlang; zk new -g rustlang $ZK_NOTEBOOK_DIR/journal/rustlang $@"
 todos = "mkdir -p $ZK_NOTEBOOK_DIR/todos; zk new -g todos $ZK_NOTEBOOK_DIR/todos $@"
 
 # Default flags for an existing command.

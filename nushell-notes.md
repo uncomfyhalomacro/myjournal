@@ -1,3 +1,5 @@
+:shells:
+
 # Nushell Notes
 
 ## Equivalent Commands

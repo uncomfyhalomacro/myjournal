@@ -1,5 +1,6 @@
 ---
 tags:
+  - empty
 ---
 
 # {{title}}

@@ -1,6 +1,10 @@
-+++
-title = "new title"
-date = {{format-date now "%Y-%m-%d"}}
-description = "new description"
-+++
+---
+title: "{{title}}"
+date: {{format-date now "%Y-%m-%dT%TZ"}}
+description: ""
+tags:
+  - empty
+---
+
+# {{title}} {{format-date now "long"}}
 
