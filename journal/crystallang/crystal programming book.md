@@ -4,7 +4,7 @@ tags:
   - ruby
   - llvm
   - repl
-  - book
+  - books
 ---
 
 ---

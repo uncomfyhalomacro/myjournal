@@ -6,8 +6,6 @@ tags:
   - low-level language
 ---
 
-#TODO: Manual Memory Management.
-
 # hare programming language tutorial
 
 ## Hare's components
@@ -171,4 +169,4 @@ of the array. Hence, `fill[2..10]` will have three 100s.
 #### Error handling
 
 
-
+:todo:
