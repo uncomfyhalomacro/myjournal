@@ -34,3 +34,35 @@
 - [ ] [Rust Perf Book](https://nnethercote.github.io/perf-book/)
 - [ ] [WebGPU Rust](https://sotrh.github.io/learn-wgpu/)
 
+
+# Monologue 
+
+For me, I want to learn these things
+- databases and SQL
+- proper programming/software practices
+- learn X and Y language (Go, Crystal)
+
+then i break this down to smaller parts based on priority
+
+## Proper programming/software practices
+
+- Read Code Craft 30 minutes a day.
+
+After I am done with that
+
+## Learn Go
+
+- Watch Learn Go in 3 Hours
+- Read Writing Interpreters in Go
+
+## Learn Crystal
+
+- Read the Crystal Programming Book
+
+### Side quest
+
+- Learn how to read a specification
+  - Learn RDF
+- Write a crystal *shard* (lib) for RDF
+- Write a go lib for RDF
+- Write a rust lib for RDF
