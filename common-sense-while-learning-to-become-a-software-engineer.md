@@ -1,6 +1,6 @@
 :software:software-principles:
 
-So there are many stuff in software that requires "common sense"
+# So there are many stuff in software that requires "common sense"
 
 - personal projects; you are free to do your own style and rules
 - collaboration projects; you are required to create "house styles" and you and your team, whether you dislike it or not, should follow.

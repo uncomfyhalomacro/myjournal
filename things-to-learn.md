@@ -33,6 +33,7 @@
 - [ ] [SQLBolt](https://sqlbolt.com/) :todo:
 - [ ] [Rust Perf Book](https://nnethercote.github.io/perf-book/)
 - [ ] [WebGPU Rust](https://sotrh.github.io/learn-wgpu/)
+- [ ] [Think Julia](https://benlauwens.github.io/ThinkJulia.jl/latest/book.html)
 
 
 # Monologue 
