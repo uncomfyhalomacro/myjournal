@@ -67,3 +67,4 @@ After I am done with that
 - Write a crystal *shard* (lib) for RDF
 - Write a go lib for RDF
 - Write a rust lib for RDF
+- Learn bioinformatics and its importance by reading articles that use [rust-bio](https://github.com/rust-bio/rust-bio).
